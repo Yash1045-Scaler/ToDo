@@ -1,6 +1,7 @@
 <p id="notice" style="color: green"><%= notice %></p>
 
-<%= render @todo_list %>
+<h2 class="todo_list_title"><%= @todo_list.Title %></h2>
+<p class="todo_list_sub_title"><%= @todo_list.Description %></p>
 
 
 <div id="todo_items_wrapper">
@@ -9,9 +10,14 @@
   <%= render "todo_items/form" %>
  </div>
 </div>
-<div>
+<div class="links">
   <%= link_to "Edit this todo list", edit_todo_list_path(@todo_list) %> |
   <%= link_to "Back to todo lists", todo_lists_path %>
-
+  <p> </p>
+  <div>
   <%= button_to "Destroy this todo list", @todo_list, method: :delete %>
+  
+  </div>
 </div>
+<p> </p>
+
